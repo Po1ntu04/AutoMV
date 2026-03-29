@@ -246,7 +246,7 @@ def call_gemini(prompt, video_file_path, max_retry=10):
             video_bytes = open(video_file_path, 'rb').read()
 
             client = genai.Client(
-                            api_key="AIzaSyBHBpSyAK6xBsw6J4-p-GLOonzVsO-FBEY"
+                            api_key=""
                         )
             response = client.models.generate_content(
                 model='gemini-3-pro-preview',
