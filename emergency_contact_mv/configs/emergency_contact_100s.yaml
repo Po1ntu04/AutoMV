@@ -1,0 +1,45 @@
+project:
+  id: emergency_contact_100s
+  title: Emergency Contact MV 100s
+  song_path: emergency_contact_mv/input/song.mp3
+  lyrics_path: emergency_contact_mv/input/lyrics_verified.txt
+  plan_path: emergency_contact_mv/input/plan_v0.md
+  output_ratio: "16:9"
+  fps: 24
+  start_time: 122.7
+  end_time: 222.7
+
+creative:
+  format: original modern anime film
+  narrative_device: pre-hiking emergency-contact fantasy revealed as imagination
+  avoid_lipsync: true
+  avoid_front_singing: true
+  no_generated_text: true
+  first_milestone: engineering scaffold
+
+generation:
+  live_api_default: false
+  keyframe_candidates_per_shot: 0
+  video_candidates_per_shot: 0
+  hero_video_candidates_per_shot: 0
+  default_duration: 4
+  resolution: 1080P
+
+backends:
+  llm_planner: openai:gpt-5.1
+  llm_alt: dashscope:qwen-plus
+  asr_primary: dashscope:qwen3-asr
+  asr_alt: openai:gpt-4o-transcribe
+  image_primary: dashscope:wan2.6-t2i
+  image_alt: openai:gpt-image-1.5
+  video_primary: dashscope:wan2.7-i2v
+  video_character: dashscope:wan2.7-r2v
+  video_alt: volcengine:seedance2
+  verifier_primary: dashscope:qwen-vl-plus
+  verifier_alt: openai:gpt-5.1-image-input
+
+safety:
+  forbid_paid_generation_in_phase1: true
+  forbid_committing_media: true
+  forbid_committing_env: true
+  require_manual_timeline_review: true

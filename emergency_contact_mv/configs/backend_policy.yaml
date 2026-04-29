@@ -1,0 +1,34 @@
+phase1:
+  allow_live_llm: false
+  allow_asr: false
+  allow_image_generation: false
+  allow_video_generation: false
+  purpose: scaffold and validate local/remote readiness only
+
+phase2:
+  allow_live_llm: true
+  allow_asr: true
+  allow_image_generation: false
+  allow_video_generation: false
+  purpose: audio and manually reviewed lyric timeline
+
+phase3:
+  allow_live_llm: true
+  allow_asr: false
+  allow_image_generation: true
+  allow_video_generation: false
+  purpose: character references and keyframes
+
+phase4_gate:
+  allow_live_llm: true
+  allow_asr: false
+  allow_image_generation: true
+  allow_video_generation: true
+  max_shots: 5
+  purpose: S01-S05 technical pilot only
+
+defaults:
+  preferred_gpu: 4
+  avoid_gpu_if_busy_over_percent: 80
+  require_report_after_each_phase: true
+  require_manual_review_before_batch_generation: true

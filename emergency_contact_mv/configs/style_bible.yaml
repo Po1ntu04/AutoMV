@@ -1,0 +1,34 @@
+style:
+  positive_prompt: >
+    Original modern anime film look, cinematic 2D animation, detailed painted
+    backgrounds, subtle cel shading, restrained character animation, muted
+    blue-gray dawn, cold phone-screen glow, delicate film grain, psychological
+    drama mood, elegant composition, negative space, high visual consistency,
+    16:9 widescreen, no singer performance, no lip-sync, no readable text in
+    the scene.
+  negative_prompt: >
+    no readable text, no subtitles, no Chinese characters, no UI text, no
+    watermark, no singer performance, no lip-sync, no front-facing singing,
+    no gore, no corpse, no explicit death, no extra fingers, no deformed
+    hands, no glowing eyes, no celebrity likeness, no real singer likeness,
+    no drastic style change, no chibi, no overly cute style.
+
+visual_layers:
+  reality:
+    purpose: pre-hiking phone confrontation
+    palette: desaturated gray-blue, cold white phone light
+    camera: static frames, slow push-ins, hand and phone close-ups
+  fantasy:
+    purpose: alpine accident and imagined notification chain
+    palette: hard blue-white snow light, silver-gray interiors
+    camera: slow lateral drift, reflective glass, empty negative space
+  disenchantment:
+    purpose: deleting the emergency contact and returning to reality
+    palette: neutral cold daylight with fewer dramatic filters
+    camera: still real-time shots, sparse editing
+
+motifs:
+  - line
+  - rectangle
+  - reflection
+  - fog

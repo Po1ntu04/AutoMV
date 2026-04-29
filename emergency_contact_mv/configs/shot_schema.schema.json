@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Emergency Contact MV Shot",
+  "type": "object",
+  "required": [
+    "shot_id",
+    "start",
+    "end",
+    "duration",
+    "layer",
+    "narrative_function",
+    "lyric_segment_ids",
+    "characters",
+    "location",
+    "camera",
+    "prompt_en",
+    "negative_prompt",
+    "backend_hint",
+    "acceptance"
+  ],
+  "properties": {
+    "shot_id": { "type": "string", "pattern": "^S[0-9]{2}$" },
+    "start": { "type": "number" },
+    "end": { "type": "number" },
+    "duration": { "type": "number" },
+    "layer": { "type": "string" },
+    "narrative_function": { "type": "string" },
+    "music_function": { "type": "string" },
+    "lyric_segment_ids": { "type": "array", "items": { "type": "string" } },
+    "characters": { "type": "array", "items": { "type": "string" } },
+    "location": { "type": "string" },
+    "visual_motif": { "type": "array", "items": { "type": "string" } },
+    "camera": {
+      "type": "object",
+      "required": ["shot_size", "movement", "lens_feel"],
+      "properties": {
+        "shot_size": { "type": "string" },
+        "movement": { "type": "string" },
+        "lens_feel": { "type": "string" }
+      }
+    },
+    "prompt_en": { "type": "string" },
+    "negative_prompt": { "type": "string" },
+    "backend_hint": { "type": "string" },
+    "reference_assets": { "type": "array", "items": { "type": "string" } },
+    "post_overlay": { "type": "array", "items": { "type": "string" } },
+    "acceptance": {
+      "type": "object",
+      "required": ["must_have", "reject_if"],
+      "properties": {
+        "must_have": { "type": "array", "items": { "type": "string" } },
+        "reject_if": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

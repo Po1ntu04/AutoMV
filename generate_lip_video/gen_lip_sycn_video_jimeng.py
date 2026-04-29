@@ -1,3 +1,4 @@
+import os
 import requests
 import time
 from volcengine import visual
@@ -77,8 +78,9 @@ def generate_lip_video_from_jimeng(image_path, audio_path, output_video_path, pr
     visual_service = VisualService()
     vocal_audio_path = generate_vocal(audio_path)
     # call below method if you don't set ak and sk in $HOME/.volc/config
-    visual_service.set_ak('AKLTMmZhZDc2YTk0ZTg2NGM1MWFiZjNmN2Y2ZDNkNWIyZTY')
-    visual_service.set_sk('WmpjNU1UazROakZpTTJaaU5ETTJNR0ZtWmpBell6UXhNRGs0WldFMk0yVQ==')
+    if config.HUOSHAN_ACCESS_KEY and config.HUOSHAN_SECRET_KEY:
+        visual_service.set_ak(config.HUOSHAN_ACCESS_KEY)
+        visual_service.set_sk(config.HUOSHAN_SECRET_KEY)
     image_url = upload_to_aliyun(image_path,config)
     audio_url = upload_to_aliyun(vocal_audio_path,config)
     form = {

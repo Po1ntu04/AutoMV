@@ -1,0 +1,22 @@
+scores:
+  style_harmony: 20
+  character_consistency: 20
+  physical_authenticity: 15
+  narrative_function: 20
+  lighting_semantics: 15
+  text_safety: 10
+
+must_reject:
+  - clearly deformed hands or fingers
+  - character face or outfit drift
+  - readable generated text, fake Chinese, watermark, or wrong UI
+  - singer performance or lip-sync shot
+  - corpse, gore, explicit fall, or explicit death
+  - real brand UI that cannot be controlled in post
+
+review_questions:
+  - Can a viewer understand the fantasy-to-self-awareness arc?
+  - Does the ending read as deleting the emergency contact, not just sadness?
+  - Is the ex-contact too objectively present?
+  - Is reality too warm or romanticized?
+  - Are phone UI and lyrics clearly post-produced rather than model-generated?

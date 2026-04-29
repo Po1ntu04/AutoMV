@@ -1,0 +1,29 @@
+characters:
+  protagonist:
+    role: male lead, about to go hiking
+    age: mid-20s
+    ethnicity: East Asian
+    hair: short black hair, slightly messy, natural fringe
+    face: tired eyes, restrained expression, realistic anime proportions
+    outfit_reality: dark graphite hiking shell jacket, black base layer, dark hiking pants
+    outfit_fantasy: same jacket with frost or snow traces
+    props:
+      - smartphone
+      - dark hiking backpack
+      - folded route map
+      - charging cable
+    appearance_rule: same hair, jacket, and backpack color across all shots
+  ex_contact:
+    role: ex-girlfriend, emergency contact in protagonist phone
+    age: mid-20s
+    ethnicity: East Asian
+    hair: long black hair, simple low ponytail or loose hair
+    outfit: off-white coat, pale beige scarf, dark skirt or trousers
+    visibility_rule: mostly back view, side profile, reflection, out-of-focus silhouette, contact avatar
+    narrative_rule: never confirmed as objectively present; appears as imagined projection
+
+non_character_systems:
+  - phone notification vibration
+  - rescue lights on snow
+  - airport announcement ambience
+  - abstract system popup shape without text

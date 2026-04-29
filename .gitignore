@@ -1,0 +1,26 @@
+.env
+.env.*
+!.env.example
+
+# Project runtime artifacts for the Emergency Contact MV workflow.
+emergency_contact_mv/input/
+emergency_contact_mv/work/
+emergency_contact_mv/outputs/
+
+# Generated media and review artifacts should stay out of Git.
+*.mp3
+*.wav
+*.flac
+*.m4a
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# Python/cache noise.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
