@@ -29,6 +29,19 @@ emergency_contact_mv/
   docs/        committed; phase reports and operator notes
 ```
 
+
+## Environment
+
+Real credentials live in ignored files:
+
+- `.env` for the original AutoMV `config.py` loader.
+- `emergency_contact_mv/.env` for this project scaffold.
+
+The committed `.env.example` must remain a placeholder-only template. With the
+currently available keys, phase 2 should prefer DashScope for planning, ASR,
+image/video, Qwen-VL verification, and use Huoshan/Seedance only as an optional
+video fallback. OpenAI and Doubao stay disabled until their keys are available.
+
 ## Run Phase 1
 
 ```bash

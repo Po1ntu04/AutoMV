@@ -10,6 +10,17 @@ import subprocess
 from pathlib import Path
 
 
+def load_env_file(path: Path) -> None:
+    if not path.exists():
+        return
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
+
+
 REQUIRED_CONFIGS = [
     "emergency_contact_mv/configs/emergency_contact_100s.yaml",
     "emergency_contact_mv/configs/style_bible.yaml",
@@ -34,6 +45,8 @@ def main() -> None:
     parser.add_argument("--out", default="emergency_contact_mv/work/00_audio_probe/phase1_validation.json", type=Path)
     args = parser.parse_args()
     root = args.root.resolve()
+    load_env_file(root / ".env")
+    load_env_file(root / "emergency_contact_mv/.env")
 
     checks = {
         "configs_present": all((root / p).exists() for p in REQUIRED_CONFIGS),
@@ -42,12 +55,16 @@ def main() -> None:
         "lyrics_present": (root / "emergency_contact_mv/input/lyrics_verified.txt").exists(),
         "ffmpeg_present": command_exists("ffmpeg"),
         "ffprobe_present": command_exists("ffprobe"),
-        "live_api_default": False,
+        "root_env_present": (root / ".env").exists(),
+        "project_env_present": (root / "emergency_contact_mv/.env").exists(),
+        "source_audio_url_present": bool(os.getenv("SOURCE_AUDIO_URL")),
+        "live_api_default": os.getenv("LIVE_API_DEFAULT", "false").lower() == "true",
         "api_env_present": {
             "OPENAI_API_KEY": bool(os.getenv("OPENAI_API_KEY")),
             "DASHSCOPE_API_KEY": bool(os.getenv("DASHSCOPE_API_KEY")),
             "ALIYUN_OSS_ACCESS_KEY_ID": bool(os.getenv("ALIYUN_OSS_ACCESS_KEY_ID")),
             "ALIYUN_OSS_BUCKET_NAME": bool(os.getenv("ALIYUN_OSS_BUCKET_NAME")),
+            "HUOSHAN_ACCESS_KEY": bool(os.getenv("HUOSHAN_ACCESS_KEY")),
         },
     }
     checks["ok"] = all(

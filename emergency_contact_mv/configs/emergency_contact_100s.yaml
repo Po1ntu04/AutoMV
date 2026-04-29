@@ -26,9 +26,9 @@ generation:
   resolution: 1080P
 
 backends:
-  llm_planner: openai:gpt-5.1
-  llm_alt: dashscope:qwen-plus
-  asr_primary: dashscope:qwen3-asr
+  llm_planner: dashscope:qwen-plus
+  llm_alt: openai:gpt-5.1
+  asr_primary: dashscope:qwen3-asr-flash
   asr_alt: openai:gpt-4o-transcribe
   image_primary: dashscope:wan2.6-t2i
   image_alt: openai:gpt-image-1.5
