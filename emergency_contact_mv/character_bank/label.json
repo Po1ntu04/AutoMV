@@ -1,0 +1,79 @@
+{
+  "Male_Hiker": {
+    "name": "Male_Hiker",
+    "age": "mid 20s",
+    "gender": "male",
+    "nationality": "Hong Kong / East Asian",
+    "visual_style": "original modern anime film, cinematic 2D animation, realistic proportions, restrained acting",
+    "hair_color": "black",
+    "hair_length": "short, slightly messy",
+    "appearance": "A quiet East Asian young man with tired eyes, wearing a dark graphite hiking shell jacket, black base layer, dark hiking pants, and a dark hiking backpack. His expression is restrained and self-aware, never melodramatic.",
+    "identity_anchors": [
+      "short slightly messy black hair",
+      "tired eyes",
+      "dark graphite hiking shell jacket",
+      "black base layer",
+      "dark hiking backpack",
+      "restrained self-aware expression"
+    ],
+    "role": "protagonist / the person who keeps his ex as emergency contact",
+    "allowed_states": {
+      "real_world_pre_hike": "clean dark graphite hiking shell, phone glow on face, controlled anxiety",
+      "snow_fantasy": "same outfit with subtle frost and snow traces, colder lighting, no gore or visible injury",
+      "disenchantment": "same outfit under neutral daylight, less dramatic lighting, quieter posture"
+    },
+    "continuity_rules": [
+      "Keep the same hair shape, jacket color, backpack, and tired restrained eyes across every image.",
+      "Do not make him look like a pop idol, singer, celebrity, or exaggerated action hero.",
+      "Do not show front-facing singing or lip-sync performance."
+    ],
+    "negative_prompt": "no celebrity likeness, no singer performance, no lip-sync, no gore, no corpse, no melodramatic crying, no chibi, no drastic outfit change"
+  },
+  "Ex_Emergency_Contact": {
+    "name": "Ex_Emergency_Contact",
+    "age": "mid 20s",
+    "gender": "female",
+    "nationality": "Hong Kong / East Asian",
+    "visual_style": "original modern anime film, cinematic 2D animation, realistic proportions, restrained acting",
+    "identity_anchor": "An East Asian woman in her mid 20s with natural black hair, a calm oval face, gentle but unreadable eyes, minimal makeup, and a quiet restrained presence. She should remain recognizably the same person across all scenes.",
+    "base_appearance": "Usually seen in pale neutral colors such as off-white, cream, beige, or soft gray. Her full frontal face is rarely shown; she is often seen in side profile, reflection, phone photo, or soft blur.",
+    "identity_anchors": [
+      "natural black hair",
+      "calm oval face",
+      "gentle but unreadable eyes",
+      "minimal makeup",
+      "quiet restrained presence",
+      "pale neutral clothing palette"
+    ],
+    "appearance_policy": "single character identity across variants; variants are memory, fantasy, projection, or emotional lighting states, not different women",
+    "appearance_variants": {
+      "memory_first_love": "soft cream cardigan, white shirt, low ponytail, warm Hong Kong streetlight, nostalgic low-saturation film grain, intimate but ordinary",
+      "snow_rescue_fantasy": "off-white wool coat, pale beige scarf, backlit by snow and mountain light, distant and unreachable, partially obscured by drifting snow",
+      "phone_contact_trace": "small outdated contact portrait on a cold blue phone screen, slightly blurred, more like a digital trace than a living person",
+      "silent_judgement": "seen through glass reflection or a closing subway door, cold flat lighting, quiet unreadable expression, emotionally distant",
+      "real_world_demystified": "ordinary city outfit, neutral daylight, no halo or romantic lighting, appears as a real person with her own life"
+    },
+    "role": "ex-girlfriend / imagined emergency contact / emotional projection / person gradually released from the protagonist's fantasy",
+    "hundred_second_usage": {
+      "primary_variants": [
+        "phone_contact_trace",
+        "snow_rescue_fantasy",
+        "silent_judgement"
+      ],
+      "minimal_variants": [
+        "memory_first_love"
+      ],
+      "avoid_or_optional_variants": [
+        "real_world_demystified"
+      ],
+      "narrative_rule": "In the 100-second MV, she should not be confirmed as objectively receiving a real rescue call. She appears as phone trace, fantasy rescue figure, memory residue, or reflective judgement."
+    },
+    "continuity_rules": [
+      "Keep her recognizably the same person across all variants through face shape, hair color, eye shape, and restrained expression.",
+      "Change lighting, camera distance, clothing layer, and scene context before changing facial identity.",
+      "Prefer side profile, reflection, back view, phone portrait, or soft blur over direct full frontal portrait.",
+      "Do not overuse warm romantic memory shots in the 100-second cut."
+    ],
+    "negative_prompt": "no different woman identity, no glamour model styling, no idol pose, no heavy makeup, no front-facing music video performance, no readable phone text, no halo, no overly romantic rescue fantasy"
+  }
+}

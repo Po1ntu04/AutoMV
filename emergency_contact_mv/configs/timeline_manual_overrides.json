@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-04-30",
+  "source": "manual listening correction from user feedback",
+  "applies_to": [
+    "emergency_contact_mv/work/03_lyrics_timeline/lyrics_timeline_full.json",
+    "emergency_contact_mv/work/03_lyrics_timeline/lyrics_timeline_100s.json"
+  ],
+  "notes": [
+    "L05 starts before the ASR sentence token for '不解'; the user heard '你' in the late 36s and '可会' by about 37s.",
+    "At 40.43s the vocal is already inside L06, around '了它', so L06 must start earlier than the ASR-derived boundary.",
+    "For L42, 170.64s-172.10s corresponds to '遗言说 好想你'; '都想借' is around 169s."
+  ],
+  "overrides": [
+    {
+      "id": "L05",
+      "start": 36.65,
+      "end": 38.35,
+      "review_status": "manual_corrected",
+      "reason": "Manual listening places the line earlier than ASR proportional split."
+    },
+    {
+      "id": "L06",
+      "start": 38.35,
+      "end": 43.47,
+      "review_status": "context_adjusted_after_manual_review",
+      "reason": "Keeps the following line monotonic after L05 correction; 40.43s is already inside this line."
+    },
+    {
+      "id": "L41",
+      "start": 166.16,
+      "end": 168.85,
+      "review_status": "context_adjusted_after_manual_review",
+      "reason": "Creates room for '都想借' at about 169s."
+    },
+    {
+      "id": "L42",
+      "start": 168.85,
+      "end": 172.10,
+      "review_status": "manual_corrected",
+      "reason": "Manual listening places '都想借' before 170s and '遗言说 好想你' at 170.64s-172.10s."
+    },
+    {
+      "id": "L43",
+      "start": 172.10,
+      "end": 175.60,
+      "review_status": "context_adjusted_after_manual_review",
+      "reason": "Starts immediately after the manually corrected L42 endpoint."
+    }
+  ]
+}

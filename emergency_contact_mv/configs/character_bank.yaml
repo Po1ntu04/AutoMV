@@ -1,29 +1,43 @@
 characters:
-  protagonist:
-    role: male lead, about to go hiking
+  Male_Hiker:
+    role: protagonist / the person who keeps his ex as emergency contact
     age: mid-20s
-    ethnicity: East Asian
+    ethnicity: Hong Kong / East Asian
     hair: short black hair, slightly messy, natural fringe
-    face: tired eyes, restrained expression, realistic anime proportions
+    face: tired eyes, restrained self-aware expression, realistic anime proportions
     outfit_reality: dark graphite hiking shell jacket, black base layer, dark hiking pants
-    outfit_fantasy: same jacket with frost or snow traces
+    outfit_fantasy: same jacket with subtle frost or snow traces
     props:
       - smartphone
       - dark hiking backpack
       - folded route map
       - charging cable
-    appearance_rule: same hair, jacket, and backpack color across all shots
-  ex_contact:
-    role: ex-girlfriend, emergency contact in protagonist phone
+    appearance_rule: same hair, jacket, backpack, tired eyes, and restrained expression across all shots
+
+  Ex_Emergency_Contact:
+    role: ex-girlfriend / imagined emergency contact / emotional projection
     age: mid-20s
-    ethnicity: East Asian
-    hair: long black hair, simple low ponytail or loose hair
-    outfit: off-white coat, pale beige scarf, dark skirt or trousers
-    visibility_rule: mostly back view, side profile, reflection, out-of-focus silhouette, contact avatar
-    narrative_rule: never confirmed as objectively present; appears as imagined projection
+    ethnicity: Hong Kong / East Asian
+    identity_anchor: calm oval face, natural black hair, gentle but unreadable eyes, minimal makeup
+    base_appearance: pale neutral clothing, usually off-white, cream, beige, or soft gray
+    visibility_rule: mostly side profile, reflection, phone portrait, back view, or soft blur
+    narrative_rule: never confirmed as objectively present in the 100-second cut
+    appearance_policy: same woman across memory, fantasy, contact trace, and judgement variants
+    primary_100s_variants:
+      - phone_contact_trace
+      - snow_rescue_fantasy
+      - silent_judgement
+    minimal_100s_variants:
+      - memory_first_love
+    avoid_or_optional_100s_variants:
+      - real_world_demystified
 
 non_character_systems:
   - phone notification vibration
+  - cold white waveform or audio-fragment abstraction
   - rescue lights on snow
-  - airport announcement ambience
-  - abstract system popup shape without text
+  - airport glass, luggage wheel, gate light, or jet bridge as possibility fragments
+  - abstract system popup shape without readable text
+
+reference_files:
+  label_json: emergency_contact_mv/character_bank/label.json
